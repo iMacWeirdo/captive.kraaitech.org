@@ -97,6 +97,19 @@
         flex-direction: column;
         gap: 0.5rem;
       }
+      .connect-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none; /* If using an anchor tag for form submission */
+        }
+        .connect-button:hover {
+            background-color: #0056b3;
+        }
     }
   </style>
 </head>
@@ -108,7 +121,14 @@
   <section class="hero">
     <h1>KraaiTech Wifi Service</h1>
     <p>To connect, you must agree to the terms of service.</p>
+    <form action="/uam/v1/auth" method="post"> 
+            <button type="submit" class="connect-button">Connect Now</button>
+            <!-- You might need hidden input fields for specific authentication parameters depending on your setup -->
+            <!-- <input type="hidden" name="username" value="guest"> -->
+            <!-- <input type="hidden" name="password" value="guest"> -->
+    </form>
   </section>
+  
 
   <footer>
     Kraai Technology Services - 2025
